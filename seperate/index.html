@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>AngularJS Custom Directive Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="./MainController.js"></script>
+  <script src="./mytable.js"></script>
+</head>
+<body>
+  <div ng-controller="MainController">
+    <my-form data="selectedRowData" ></my-form>
+    <my-table data="tableData" ></my-table>
+  </div>
+</body>
+</html>

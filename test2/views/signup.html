@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+</head>
+<body>
+    <h2>Signup Page</h2>
+
+<form ng-submit="signup()">
+  <label>Username:</label>
+  <input type="text" ng-model="signupData.username" required>
+
+  <label>Password:</label>
+  <input type="password" ng-model="signupData.password" required>
+
+  <button type="submit">Signup</button>
+</form>
+
+</body>
+</html>

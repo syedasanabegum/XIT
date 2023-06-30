@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/ui-grid.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="myApp" ng-controller="FormController">
+  <form>
+    <label>First Name:</label>
+    <input type="text" ng-model="firstName"><br>
+    <label>Last Name:</label>
+    <input type="text" ng-model="lastName"><br>
+    <label>Email:</label>
+    <input type="email" ng-model="email"><br>
+    <button type="button" ng-click="submitForm()">Submit</button>
+  </form>
+
+  <div ui-grid="gridOptions" class="grid"></div>
+
+  <script src="js/angular.min.js"></script>
+  <script src="js/ui-grid.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

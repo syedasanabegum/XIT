@@ -1,0 +1,238 @@
+>>cd <folderName>
+>>git add .(adding files to stage area)
+>>git commit -m "message"(commit and a mssg while commiting)
+>>git remote add <folderNickname> <githubRepoLink>(github connection)
+>>git remote(checking remote repos)
+>>git pull <folderNickname> main --allow-unrelated-histories(pulling files from github , use the flag only for the first time)
+>>dir(commit history)
+>>git push <folderNickname>(for pushing files to github)
+>>git log(to view complete commit history)
+---------------------------------------------
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git checkout week1
+Already on 'week1'
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git add C:\Users\HP\Desktop\XIT\Angular\CrudAngularJS
+fatal: C:\Users\HP\Desktop\XIT\Angular\CrudAngularJS: 'C:\Users\HP\Desktop\XIT\Angular\CrudAngularJS' is outside repository at 'C:/Users/HP/Desktop/XIT/AngularJs_Tasks'
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git branch
+  main
+* week1
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git checkout week1
+Already on 'week1'
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>ls
+CrudAngularJS  README.md
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>ls
+CrudAngularJS  README.md
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>ls
+README.md
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git checkout main
+Switched to branch 'main'
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git pull origin main
+From https://github.com/syedasanabegum/AngularJs_Tasks
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git ls-tree --name-only main
+README.md
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git checkout week1
+Switched to branch 'week1'
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git ls-tree --name-only week1
+README.md
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git pull origin week1
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 12 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (12/12), 4.33 KiB | 6.00 KiB/s, done.
+From https://github.com/syedasanabegum/AngularJs_Tasks
+ * branch            week1      -> FETCH_HEAD
+   cc4a1ca..e2de25a  week1      -> origin/week1
+Updating cc4a1ca..e2de25a
+Fast-forward
+ CrudAPI/index.css            |  4 ++
+ CrudAPI/index.html           | 95 ++++++++++++++++++++++++++++++++++++++++++++
+ CrudAPI/index.js             | 39 ++++++++++++++++++
+ CrudAngularJS/angularCrud.js | 38 ++++++++++++++++++
+ CrudAngularJS/first.html     | 56 ++++++++++++++++++++++++++
+ CrudAngularJS/style.css      | 19 +++++++++
+ 6 files changed, 251 insertions(+)
+ create mode 100644 CrudAPI/index.css
+ create mode 100644 CrudAPI/index.html
+ create mode 100644 CrudAPI/index.js
+ create mode 100644 CrudAngularJS/angularCrud.js
+ create mode 100644 CrudAngularJS/first.html
+ create mode 100644 CrudAngularJS/style.css
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git ls-tree --name-only week1
+CrudAPI
+CrudAngularJS
+README.md
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git checkout main
+Switched to branch 'main'
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git branch week2
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git checkout week2
+Switched to branch 'week2'
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git push origin week2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'week2' on GitHub by visiting:
+remote:      https://github.com/syedasanabegum/AngularJs_Tasks/pull/new/week2
+remote:
+To https://github.com/syedasanabegum/AngularJs_Tasks.git
+ * [new branch]      week2 -> week2
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git checkout week2
+Already on 'week2'
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git pull origin week2
+remote: Enumerating objects: 32, done.
+remote: Counting objects: 100% (32/32), done.
+remote: Compressing objects: 100% (31/31), done.
+remote: Total 31 (delta 5), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (31/31), 9.04 KiB | 5.00 KiB/s, done.
+From https://github.com/syedasanabegum/AngularJs_Tasks
+ * branch            week2      -> FETCH_HEAD
+   cc4a1ca..5e5a63b  week2      -> origin/week2
+Updating cc4a1ca..5e5a63b
+Fast-forward
+ CustomDirectiveAPI/index.html           | 16 ++++++++++
+ CustomDirectiveAPI/js/app.js            |  1 +
+ CustomDirectiveAPI/js/controllers.js    | 39 ++++++++++++++++++++++++
+ CustomDirectiveAPI/js/directives.js     | 15 ++++++++++
+ CustomDirectiveAPI/my-form.html         | 53 +++++++++++++++++++++++++++++++++
+ CustomDirectiveAPI/my-table.html        | 50 +++++++++++++++++++++++++++++++
+ CustomDirectiveAPI/style.css            |  4 +++
+ CustomerDirectiveCrud/index.html        | 16 ++++++++++
+ CustomerDirectiveCrud/js/app.js         |  1 +
+ CustomerDirectiveCrud/js/controllers.js | 37 +++++++++++++++++++++++
+ CustomerDirectiveCrud/js/directives.js  | 15 ++++++++++
+ CustomerDirectiveCrud/my-form.html      | 26 ++++++++++++++++
+ CustomerDirectiveCrud/my-table.html     | 34 +++++++++++++++++++++
+ CustomerDirectiveCrud/style.css         | 19 ++++++++++++
+ Routing/app.js                          | 22 ++++++++++++++
+ Routing/controllers.js                  | 30 +++++++++++++++++++
+ Routing/index.html                      | 23 ++++++++++++++
+ Routing/views/home.html                 | 19 ++++++++++++
+ Routing/views/login.html                | 43 ++++++++++++++++++++++++++
+ Routing/views/logout.html               | 17 +++++++++++
+ 20 files changed, 480 insertions(+)
+ create mode 100644 CustomDirectiveAPI/index.html
+ create mode 100644 CustomDirectiveAPI/js/app.js
+ create mode 100644 CustomDirectiveAPI/js/controllers.js
+ create mode 100644 CustomDirectiveAPI/js/directives.js
+ create mode 100644 CustomDirectiveAPI/my-form.html
+ create mode 100644 CustomDirectiveAPI/my-table.html
+ create mode 100644 CustomDirectiveAPI/style.css
+ create mode 100644 CustomerDirectiveCrud/index.html
+ create mode 100644 CustomerDirectiveCrud/js/app.js
+ create mode 100644 CustomerDirectiveCrud/js/controllers.js
+ create mode 100644 CustomerDirectiveCrud/js/directives.js
+ create mode 100644 CustomerDirectiveCrud/my-form.html
+ create mode 100644 CustomerDirectiveCrud/my-table.html
+ create mode 100644 CustomerDirectiveCrud/style.css
+ create mode 100644 Routing/app.js
+ create mode 100644 Routing/controllers.js
+ create mode 100644 Routing/index.html
+ create mode 100644 Routing/views/home.html
+ create mode 100644 Routing/views/login.html
+ create mode 100644 Routing/views/logout.html
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>ls
+CustomDirectiveAPI  CustomerDirectiveCrud  README.md  Routing
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git checkout main
+Switched to branch 'main'
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git branch week3
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git checkout week3
+Switched to branch 'week3'
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git push origin week3
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'week3' on GitHub by visiting:
+remote:      https://github.com/syedasanabegum/AngularJs_Tasks/pull/new/week3
+remote:
+To https://github.com/syedasanabegum/AngularJs_Tasks.git
+ * [new branch]      week3 -> week3
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git checkout week3
+Already on 'week3'
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git pull origin week3
+fatal: unable to access 'https://github.com/syedasanabegum/AngularJs_Tasks.git/': Could not resolve host: github.com
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>git pull origin week3
+remote: Enumerating objects: 28, done.
+remote: Counting objects: 100% (28/28), done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 27 (delta 8), reused 26 (delta 8), pack-reused 0
+Unpacking objects: 100% (27/27), 11.53 KiB | 6.00 KiB/s, done.
+From https://github.com/syedasanabegum/AngularJs_Tasks
+ * branch            week3      -> FETCH_HEAD
+   cc4a1ca..e845278  week3      -> origin/week3
+Updating cc4a1ca..e845278
+Fast-forward
+ MyApp/app.config.js                      |  49 +++++++++
+ MyApp/app.js                             |   8 ++
+ MyApp/controllers/HomeController.js      |  13 +++
+ MyApp/controllers/LoginController.js     |  37 +++++++
+ MyApp/controllers/LogoutController.js    |  14 +++
+ MyApp/controllers/ProfileController.js   |   7 ++
+ MyApp/controllers/dataTableController.js |  27 +++++
+ MyApp/controllers/tableapp.js            | 166 +++++++++++++++++++++++++++++++
+ MyApp/directives/mytable.js              |  21 ++++
+ MyApp/directives/navigationBar.js        |  16 +++
+ MyApp/index.css                          |  26 +++++
+ MyApp/index.html                         |  37 +++++++
+ MyApp/views/Modal.html                   | 114 +++++++++++++++++++++
+ MyApp/views/dataTable.html               |  19 ++++
+ MyApp/views/form.html                    |  92 +++++++++++++++++
+ MyApp/views/home.html                    |  46 +++++++++
+ MyApp/views/login.html                   |  26 +++++
+ MyApp/views/logout.html                  |  18 ++++
+ MyApp/views/profile.html                 |  38 +++++++
+ MyApp/views/table.html                   |  76 ++++++++++++++
+ MyApp/views/tableAPI.html                | 122 +++++++++++++++++++++++
+ 21 files changed, 972 insertions(+)
+ create mode 100644 MyApp/app.config.js
+ create mode 100644 MyApp/app.js
+ create mode 100644 MyApp/controllers/HomeController.js
+ create mode 100644 MyApp/controllers/LoginController.js
+ create mode 100644 MyApp/controllers/LogoutController.js
+ create mode 100644 MyApp/controllers/ProfileController.js
+ create mode 100644 MyApp/controllers/dataTableController.js
+ create mode 100644 MyApp/controllers/tableapp.js
+ create mode 100644 MyApp/directives/mytable.js
+ create mode 100644 MyApp/directives/navigationBar.js
+ create mode 100644 MyApp/index.css
+ create mode 100644 MyApp/index.html
+ create mode 100644 MyApp/views/Modal.html
+ create mode 100644 MyApp/views/dataTable.html
+ create mode 100644 MyApp/views/form.html
+ create mode 100644 MyApp/views/home.html
+ create mode 100644 MyApp/views/login.html
+ create mode 100644 MyApp/views/logout.html
+ create mode 100644 MyApp/views/profile.html
+ create mode 100644 MyApp/views/table.html
+ create mode 100644 MyApp/views/tableAPI.html
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>ls
+MyApp  README.md
+
+C:\Users\HP\Desktop\XIT\AngularJs_Tasks>

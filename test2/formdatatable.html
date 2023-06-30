@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.10.0/ui-grid.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.10.0/ui-grid.min.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="FormController">
+    <form>
+      <label>First Name:</label>
+      <input type="text" ng-model="firstName"><br>
+      <label>Last Name:</label>
+      <input type="text" ng-model="lastName"><br>
+      <label>Email:</label>
+      <input type="email" ng-model="email"><br>
+      <button type="button" ng-click="submitForm()">Submit</button>
+    </form>
+  
+    <div ui-grid="gridOptions" ui-grid-selection class="grid"></div>
+  
+ </body>
+<script>
+    var app = angular.module('myApp', ['ui.grid']);
+
+app.controller('FormController', function($scope) {
+  $scope.gridOptions = {
+    enableSorting: true,
+    enableFiltering: true,
+    columnDefs: [
+      { field: 'firstName' },
+      { field: 'lastName' },
+      { field: 'email' },
+      {
+        name: 'Actions',
+        cellTemplate: '<div class="ui-grid-cell-contents">' +
+                      '<button class="btn btn-primary btn-xs" ng-click="grid.appScope.editData(row.entity)">Edit</button>' +
+                      '<button class="btn btn-danger btn-xs" ng-click="grid.appScope.deleteData(row.entity)">Delete</button>' +
+                      '</div>'
+      }
+    ],
+    data: [] // Initialize empty data array
+  };
+
+  $scope.submitForm = function() {
+    // Create a new FormData object and push it to the grid data
+    var newFormData = {
+      firstName: $scope.firstName,
+      lastName: $scope.lastName,
+      email: $scope.email
+    };
+    $scope.gridOptions.data.push(newFormData);
+
+    // Reset the form fields
+    $scope.firstName = '';
+    $scope.lastName = '';
+    $scope.email = '';
+  };
+
+  $scope.editData = function(data) {
+    $scope.firstName = data.firstName;
+    $scope.lastName = data.lastName;
+    $scope.email = data.email;
+  };
+
+  $scope.deleteData = function(data) {
+    var index = $scope.gridOptions.data.indexOf(data);
+    if (index !== -1) {
+      $scope.gridOptions.data.splice(index, 1);
+    }
+  };
+});
+
+</script>
+</html>
