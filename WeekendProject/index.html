@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Todo List</h1>
+
+  <form id="todoForm">
+    <label for="taskTitle" style="margin-left: 10px;">Task Title:</label>
+    <input type="text" id="taskTitle" required style="margin-left: 10px;">
+
+    <label for="date" style="margin-left: 10px;">Date:</label>
+    <input type="date" id="date" required style="margin-left: 10px;">
+
+    <button type="submit" style="margin-left: 10px;">Add Task</button>
+  </form>
+
+  <table id="todoItems">
+    <thead>
+      <tr>
+        <th>Serial Number</th>
+        <th>Task Title</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Done</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table rows will be dynamically added here -->
+    </tbody>
+  </table>
+
+  
+
+  <script src="build/index.js"></script>
+</body>
+
+</html>

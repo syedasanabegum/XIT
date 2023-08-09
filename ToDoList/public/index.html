@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="dist/index.js" type="module"></script>
+  <title>Document</title>
+  <style>
+    #list {
+      list-style: none;
+      padding: 0;
+    }
+    .container{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      font-size: larger;
+    }
+    .title{
+      text-align: center;
+    }
+    .wrapper{
+      border: solid grey 2px;
+      border-radius: 10px;
+      padding:10px;
+      background-color: lightblue;
+      padding-left: 90px;
+      padding-right: 90px;
+      padding-bottom: 30px;
+
+    }
+    #new-task-title{
+      border-radius: 5px;
+      border:none;
+      padding:5px;
+    }
+    .AddBtn{
+      border-radius: 5px;
+      border:none;
+      padding: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color:black;
+      color:white;
+    }
+  </style>
+</head>
+<body class="container">
+  <div class="wrapper">
+    <h2 class="title">TODOLIST</h2>
+    <ul id="list"></ul>
+    <form id="new-task-form">
+      <input type="text" id="new-task-title">
+      <button type="submit" class="AddBtn">Add</button>
+    </form>
+  </div>
+</body>
+</html>
