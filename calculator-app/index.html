@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>Calculator</h1>
+      <form class="calculator-form">
+        <label for="operandA"><b>Operand A:</b></label>
+        <input type="number" id="operandA" required>
+
+        <label for="operandB"><b>Operand B:</b></label>
+        <input type="number" id="operandB" required>
+
+        <label for="operation"><b>Operation:</b></label>
+        <select id="operation" required>
+          <option value="add">Addition</option>
+          <option value="sub">Subtraction</option>
+          <option value="mul">Multiplication</option>
+          <option value="div">Division</option>
+        </select>
+
+        <button type="submit"><b>Calculate</b></button>
+      </form>
+
+      <div class="result-container">
+        <h2>Result:</h2>
+        <p id="result"></p>
+      </div>
+    </div>
+
+    <script src="dist/index.js"></script>
+  </body>
+</html>
